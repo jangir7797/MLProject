@@ -9,7 +9,6 @@ def error_message_detail(error,error_detail: sys):
     :return: error message
     """
     _, _, exc_tb = error_detail.exc_info()
-    import pdb; pdb.set_trace()  # This line is for debugging purposes, can be removed in production
     error_message = f"Error occurred in script: [{exc_tb.tb_frame.f_code.co_filename}] at line number: [{exc_tb.tb_lineno}] with message: [{str(error)}]"
     return error_message
 
